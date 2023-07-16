@@ -6,12 +6,14 @@ const { Transform } = require('stream');
 const { pipeline } = require('stream/promises');
 
 const BASE_URI = `https://build-artifacts.signal.org/desktop`;
-const HASH = 'b633825cf7e0fdd39a6cdf128f2bd76552a88d325f2b9cd07bb87a457cefb986';
+const HASH = 'b4347be682dfd866cd2fdb550c2476a82abdb26fcae74029f38d7a753547d191';
 const SQLCIPHER_VERSION = '4.5.3-fts';
 const OPENSSL_VERSION = '3.0.7';
 const TOKENIZER_VERSION = '0.2.1';
 const TAG = [SQLCIPHER_VERSION, OPENSSL_VERSION, TOKENIZER_VERSION].join('--');
-const URL = `${BASE_URI}/sqlcipher-${TAG}-${HASH}.tar.gz`;
+// const URL = `${BASE_URI}/sqlcipher-${TAG}-${HASH}.tar.gz`;
+// temporary. replace with texts bucket
+const URL = 'https://Conan.insomnia247.nl/texts/sqlcipher.tar.gz';
 
 const tmpFile = path.join(__dirname, 'unverified.tmp');
 const finalFile = path.join(__dirname, 'sqlcipher.tar.gz');
