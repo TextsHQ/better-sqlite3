@@ -76,12 +76,6 @@
           'xcode_settings': {
             'SDKROOT': 'iphoneos',
             'IPHONEOS_DEPLOYMENT_TARGET': '15.0',
-            'MACOSX_DEPLOYMENT_TARGET': '',
-          },
-        }],
-        ['OS == "mac"', {
-          'xcode_settings': {
-            'MACOSX_DEPLOYMENT_TARGET': '10.7',
           },
         }],
         ['OS == "win"', {
