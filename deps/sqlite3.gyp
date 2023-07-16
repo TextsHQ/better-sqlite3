@@ -91,7 +91,7 @@
             ]
           }
         },
-        'OS == "mac"', {
+        'OS in ("mac", "ios")', {
           'link_settings': {
             'libraries': [
               # This statically links libcrypto, whereas -lcrypto would dynamically link it
