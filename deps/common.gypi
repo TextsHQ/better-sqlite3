@@ -56,6 +56,19 @@
             'GenerateDebugInformation': 'true',
           },
         },
+        'conditions': [
+          ['OS == "ios"', {
+            'xcode_settings': {
+              'SDKROOT': 'iphoneos',
+              'IPHONEOS_DEPLOYMENT_TARGET': '15.0',
+            },
+          }],
+          ['OS == "mac"', {
+            'xcode_settings': {
+              'MACOSX_DEPLOYMENT_TARGET': '10.7',
+            },
+          }],
+        ],
       },
       'Release': {
         'defines!': [
@@ -69,13 +82,25 @@
           '-O3',
         ],
         'xcode_settings': {
-          'SDKROOT': 'iphoneos',
-          'IPHONEOS_DEPLOYMENT_TARGET': '15.0',
           'GCC_OPTIMIZATION_LEVEL': '3',
           'GCC_GENERATE_DEBUGGING_SYMBOLS': 'NO',
           'DEAD_CODE_STRIPPING': 'YES',
           'GCC_INLINES_ARE_PRIVATE_EXTERN': 'YES',
         },
+        'conditions': [
+          ['OS == "ios"', {
+            'xcode_settings': {
+              'SDKROOT': 'iphoneos',
+              'IPHONEOS_DEPLOYMENT_TARGET': '15.0',
+              'MACOSX_DEPLOYMENT_TARGET': '',
+            },
+          }],
+          ['OS == "mac"', {
+            'xcode_settings': {
+              'MACOSX_DEPLOYMENT_TARGET': '10.7',
+            },
+          }],
+        ],
       },
     },
   },

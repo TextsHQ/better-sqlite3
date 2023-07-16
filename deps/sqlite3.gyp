@@ -67,13 +67,23 @@
       },
       'cflags': ['-std=c99', '-w'],
       'xcode_settings': {
-        'SDKROOT': 'iphoneos',
-        'IPHONEOS_DEPLOYMENT_TARGET': '15.0',
         'OTHER_CFLAGS': ['-std=c99'],
         'WARNING_CFLAGS': ['-w'],
       },
       'includes': ['defines.gypi'],
       'conditions': [
+        ['OS == "ios"', {
+          'xcode_settings': {
+            'SDKROOT': 'iphoneos',
+            'IPHONEOS_DEPLOYMENT_TARGET': '15.0',
+            'MACOSX_DEPLOYMENT_TARGET': '',
+          },
+        }],
+        ['OS == "mac"', {
+          'xcode_settings': {
+            'MACOSX_DEPLOYMENT_TARGET': '10.7',
+          },
+        }],
         ['OS == "win"', {
           'defines': [
             'WIN32'
