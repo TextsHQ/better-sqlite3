@@ -67,6 +67,8 @@
       },
       'cflags': ['-std=c99', '-w'],
       'xcode_settings': {
+        'SDKROOT': 'iphoneos',
+        'IPHONEOS_DEPLOYMENT_TARGET': '15.0',
         'OTHER_CFLAGS': ['-std=c99'],
         'WARNING_CFLAGS': ['-w'],
       },
