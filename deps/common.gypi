@@ -46,8 +46,6 @@
           '-O0',
         ],
         'xcode_settings': {
-          'SDKROOT': 'iphoneos',
-          'IPHONEOS_DEPLOYMENT_TARGET': '15.0',
           'GCC_OPTIMIZATION_LEVEL': '0',
           'GCC_GENERATE_DEBUGGING_SYMBOLS': 'YES',
         },
