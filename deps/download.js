@@ -11,9 +11,7 @@ const SQLCIPHER_VERSION = '4.5.5-fts5-fix';
 const OPENSSL_VERSION = '3.0.7';
 const TOKENIZER_VERSION = '0.2.1';
 const TAG = [SQLCIPHER_VERSION, OPENSSL_VERSION, TOKENIZER_VERSION].join('--');
-// const URL = `${BASE_URI}/sqlcipher-${TAG}-${HASH}.tar.gz`;
-// temporary. replace with texts bucket
-const URL = 'https://Conan.insomnia247.nl/texts/sqlcipher.tar.gz';
+const URL = `${BASE_URI}/sqlcipher-${TAG}-${HASH}.tar.gz`;
 
 const tmpFile = path.join(__dirname, 'unverified.tmp');
 const finalFile = path.join(__dirname, 'sqlcipher.tar.gz');
